@@ -1,0 +1,31 @@
+{
+  "name": "real-estate-tensorflowjs-vuejs",
+  "version": "1.0.0",
+  "description": "Real Estate",
+  "author": "drginm <drginm>",
+  "private": true,
+  "scripts": {
+    "dev": "nuxt",
+    "build": "nuxt build",
+    "build:use-subfolder": "cross-env USE_SUBFOLDER=true nuxt build",
+    "start": "nuxt start",
+    "generate": "nuxt generate",
+    "generate:use-subfolder": "cross-env USE_SUBFOLDER=true nuxt generate",
+    "lint": "eslint --ext .js,.vue --ignore-path .gitignore .",
+    "precommit": "npm run lint"
+  },
+  "dependencies": {
+    "@tensorflow/tfjs": "^0.14.1",
+    "bootstrap-vue": "^2.0.0-rc.13",
+    "nuxt": "^1.0.0",
+    "one-hot-enum": "0.0.3"
+  },
+  "devDependencies": {
+    "babel-eslint": "^8.2.1",
+    "cross-env": "^5.1.6",
+    "eslint": "^4.15.0",
+    "eslint-friendly-formatter": "^3.0.0",
+    "eslint-loader": "^1.7.1",
+    "eslint-plugin-vue": "^4.0.0"
+  }
+}

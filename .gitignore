@@ -1,3 +1,9 @@
+# Nuxt build
+.nuxt
+
+# Nuxt generate
+dist
+
 # Logs
 logs
 *.log
