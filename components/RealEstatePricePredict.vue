@@ -100,7 +100,7 @@ export default {
       this.dictionary[this.neighborhoods[0]] = zeros;
     },
     async loadModel() {
-      this.model = await tf.loadModel('/shared/model/model.json');
+      this.model = await tf.loadLayersModel('shared/model/model.json');
 
       this.modelReady = true;
       this.predictedValue = 'Ready for making predictions';
@@ -141,11 +141,12 @@ export default {
 
       //Get prediction
       const prediction = this.model.predict(modelInput);
+      window.myVal = this.postProcessResults(prediction);
 
       //Transform Outputs
-      this.predictedValue = Math.ceil(this.postProcessResults(prediction).get(0, 0));
+      this.predictedValue = Math.ceil(this.postProcessResults(prediction).dataSync()[0]);
 
-      console.log(this.neighborhoods[this.neighborhood], prediction.get(0, 0), this.predictedValue);
+      console.log(this.neighborhoods[this.neighborhood], prediction.dataSync()[0], this.predictedValue);
     }
   }
 }

@@ -15,7 +15,7 @@
     "precommit": "npm run lint"
   },
   "dependencies": {
-    "@tensorflow/tfjs": "^0.14.1",
+    "@tensorflow/tfjs": "^1.1.0",
     "bootstrap-vue": "^2.0.0-rc.13",
     "nuxt": "^1.0.0",
     "one-hot-enum": "0.0.3"
